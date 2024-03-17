@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title th:text="${airport.name}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1 th:text="${found} + ' Airport Found'"></h1>
+    <span style="font-weight:bold;">Name: </span> <span th:text=" ${airport.name}" /><br>
+    <span style="font-weight:bold;">Iata Code: </span> <span th:text=" ${airport.iataCode}" /><br>
+    <span style="font-weight:bold;">Icao Code:</span> <span th:text=" ${airport.icaoCode}" /><br>
+    <span style="font-weight:bold;">Country Code:</span> <span th:text=" ${airport.countryCode}" /><br>
+    <span style="font-weight:bold;">City: </span> <span th:text=" ${airport.city}" /><br>
+    <span style="font-weight:bold;">Elevation: </span> <span th:text=" ${airport.elevation}" /><br>
+    <span style="font-weight:bold;">Timezone: </span> <span th:text=" ${airport.timezone}" /><br>
+    <span style="font-weight:bold;">Local Time: </span> <span th:text=" ${airport.localTime}" /><br>
+    <span style="font-weight:bold;">Latitude: </span> <span th:text=" ${airport.lat}" /><br>
+    <span style="font-weight:bold;">Longitude: </span> <span th:text=" ${airport.lon}" /><br>
+    <a href="/">Find another airport</a>
+</body>
+</html>

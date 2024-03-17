@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Find Airport</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Find an airport</h1>
+    <form action="#" th:action="@{/}" th:object="${form}" method="post">
+        <p>How would you like to search:</p>
+           <input type="radio" id="name" name="searchType" value="name" th:field="*{searchType}">
+           <label for="html">Name</label><br>
+            <input type="radio" id="iataCode" name="searchType" value="iataCode" th:field="*{searchType}">
+            <label for="css">Iata Code</label><br>
+            <input type="radio" id="icaoCode" name="searchType" value="icaoCode" th:field="*{searchType}">
+            <label for="javascript">Icao Code</label>
+
+    	<p>Search: <input type="text" th:field="*{searchContent}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
